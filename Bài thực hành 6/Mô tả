@@ -1,0 +1,32 @@
+Tên: Nguyễn Ngọc Trà My
+MSSV: 47.01.103.0068
+
+Bài thực hành 6: Cài đặt bài toán tháp Hà Nội
+Bài toán phải thực hiện sắp xếp các đĩa theo trật tự kích thước vào một cọc sao cho đĩa nhỏ nhất nằm trên cùng. Người chơi phải di chuyển toàn bộ số đĩa sang một cọc khác, tuân theo các quy tắc sau: một lần chỉ được di chuyển một đĩa và một đĩa chỉ có thể được đặt lên một đĩa lớn hơn.
+Bài toán tháp Hà Nội với n đĩa thì có ít nhất 2n – 1 bước thực hiện. Với ví dụ là 3 đĩa thì số bước giải ít nhất là 23-1=7 cách giải.
+Giải bài toán bằng đệ quy
+Yêu cầu chuyển n chiếc đĩa từ cột A sang cột C
+-Đầu tiên ta lấy cột C làm cọc trung gian. Chuyển n-1 chiếc đĩa sang cột B.
+-Ta chuyển chiếc đĩa lớn nhất sang cột C.
+-Lấy cột A làm cột trung gian chuyển n-1 chiếc đĩa từ cột B sang cột C.
+
+Code 
+#include<iostream>
+using namespace std;
+void Tower(int n , char a, char b, char c ){
+    if(n==1){
+        cout<<"\t"<<a<<"---->"<<c<<endl; //nếu n = 1 thì dịch chuyển từ A -> C
+    return;
+    }
+    //Nếu n > 1 thì thực hiện lần lượt
+    Tower(n-1,a,c,b); //Bước 1: Dịch chuyển n-1 đĩa từ A -> B
+    Tower(1,a,b,c); //Bước 2: Dịch chuyển đĩa thứ n từ A -> C
+    Tower(n-1,b,a,c); //Bước 3: Dịch chuyển n-1 đĩa từ B->C
+}
+int main(){
+    char a='A', b='B', c='C';
+    int n;
+    cout<<"Nhap so dia: ";
+    cin>>n;
+    Tower(n,a,b,c);
+}
