@@ -1,0 +1,70 @@
+Tên: Nguyễn Ngọc Trà My
+MSSV: 47.01.103.068
+
+Bài thực hành 9: Cài đặt bài tập nhân xích ma trận
+Phép nhân hai ma trận chỉ thực hiện được khi số lượng cột trong ma trận thứ nhất phải bằng số lượng hàng trong ma trận thứ hai. 
+Ma trận kết quả, được gọi là tích ma trận, có số lượng hàng của ma trận đầu tiên và số cột của ma trận thứ hai.
+Nếu ma trận A có kích thước (m×n) và ma trận B có kích thước (n×p), thì ma trận tích C=A×B có kích thước (m×p), phần tử đứng ở hàng thứ i, cột thứ j xác định bởi công thức:
+Cij = Ai1B1j + Ai2B2j + … + AinBnj =  với 1  i  m; 1  j  p
+
+Code
+#include<iostream>
+#include<stdio.h>
+using namespace std;
+
+int main()
+{
+    int a[10][10], b[10][10], ketqua[10][10];
+    int m, n, p, q, i, j, k;
+    
+    cout << "Nhap so dong va cot cho ma tran A: ";
+    cin >> m >> n;
+    
+    cout << "Nhap so dong va cot cho ma tran B: ";
+    cin >> p >> q;
+    
+    //kiểm tra dòng A có bằng cột B không
+    if(n == p)
+    {
+        cout << "Nhap ma tran A: "<<endl;
+        for(i = 0; i < m; ++i)
+        {
+            for(j = 0;j < n; ++j)
+            {
+                cin >> a[i][j];
+            }
+        }
+        
+        cout << "Nhap ma tran B: "<<endl;
+        for(i = 0;i < p; ++i)
+        {
+            for(j = 0;j < q;++j)
+            {
+                cin >> b[i][j];
+                
+            }
+        }
+        
+        cout << "Ket qua cua phep nhan: "<<endl;
+        for(i = 0; i < m; ++i)
+        {
+            for(j = 0; j < q; ++j)
+            {
+                 ketqua[i][j] = 0;
+                for(k = 0; k < n; ++k)
+                    ketqua[i][j] = ketqua[i][j]+(a[i][k]*b[k][j]);
+                        cout << ketqua[i][j] << " ";
+                       
+            }
+            
+            cout << endl;
+        }
+    }
+    else
+    {
+        cout << "Không thể thực hiện phép nhân ma trận!";
+    }
+ 
+    return 0;
+}
+
