@@ -1,5 +1,5 @@
 Tên: Nguyễn Ngọc Trà My
-MSSV: 47.01.103.0068
+MSSV: 47.01.103.068
 
 Bài thực hành 6: Cài đặt bài toán tháp Hà Nội
 Bài toán phải thực hiện sắp xếp các đĩa theo trật tự kích thước vào một cọc sao cho đĩa nhỏ nhất nằm trên cùng. Người chơi phải di chuyển toàn bộ số đĩa sang một cọc khác, tuân theo các quy tắc sau: một lần chỉ được di chuyển một đĩa và một đĩa chỉ có thể được đặt lên một đĩa lớn hơn.
