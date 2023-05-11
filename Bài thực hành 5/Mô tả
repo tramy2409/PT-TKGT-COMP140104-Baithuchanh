@@ -1,3 +1,6 @@
+Tên: Nguyễn Ngọc Trà My
+MSSV: 47.01.103.068
+
 Trong giải thuật QuickSort, ta chọn một phần tử làm "mốc" (pivot) và sắp xếp các phần tử trong mảng thành hai phần: một phần chứa các phần tử có giá trị nhỏ hơn pivot và một phần chứa các phần tử có giá trị lớn hơn pivot. Sau đó, ta tiếp tục sắp xếp đệ quy các phần đó.
 Input: Nhập vào mảng
 Output: Xuất mảng đã sắp xếp
