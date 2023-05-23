@@ -1,0 +1,12 @@
+Nguyễn Ngọc Trà My
+MSSV: 47.01.103.068
+Bài thực hành
+Bài thực hành 3: Cài đặt giải thuật Strassen cho nhân đa thức
+Input: Hai đa thức A và B
+Output: Kết quả của phép nhân đa thức A và B
+Cách xử lý
+-	Kiểm tra kích thước của hai đa thức A và B. Nếu kích thước nhỏ hơn một giá trị cơ sở nào đó (thường là 1 hoặc 2), ta thực hiện phép nhân đa thức thông thường và trả về kết quả.
+-	Nếu kích thước lớn hơn giá trị cơ sở, ta chia đa thức A và B thành các đa thức con. Thường là chia theo cách chia đa thức ban đầu thành bốn đa thức con có kích thước bằng nhau.
+-	Sử dụng đệ quy tính toán các đa thức con bằng cách áp dụng lại giải thuật Strassen trên các đa thức con này.
+-	Từ các kết quả đa thức con, ghép chúng lại để tạo thành đa thức kết quả.
+-	Trả về đa thức kết quả.
