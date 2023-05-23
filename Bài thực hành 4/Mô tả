@@ -3,7 +3,9 @@ MSSV: 47.01.103.068
 
 Bài thực hành 4: Cài đặt QuickSort
 Quick sort là thuật toán sắp xếp, hoạt động theo cách sau: Chọn một phần tử trong mảng làm điểm đánh dấu và sau đó chia mảng thành hai mảng con bằng cách so sánh các phần tử trong mảng với điểm đánh dấu. Mảng 1 sẽ chứ các phần tử nhỏ hơn hoặc bằng điểm đánh dấu và mảng 2 sẽ gồm các phần tử lớn hơn điểm đánh dấu.
-Cài đặt
+Input: Một mảng số nguyên chưa được sắp xếp.
+Output: Mảng đã được sắp xếp theo thứ tự tăng dần.
+Cách xử lý
 -	Chọn điểm đánh dấu cho mảng, chọn điểm đánh dấu là số cuối cùng của mảng.
 -	Tạo hai biến là trái và phải để trỏ tới bên trái và bên phải của danh sách.
 -	Thực hiện so sánh các phần tử với điểm đánh dấu. Nếu phần tử nhỏ hơn điểm đánh dấu thì dịch chuyển qua bên trái và ngược lại.
