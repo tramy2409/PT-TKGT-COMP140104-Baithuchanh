@@ -1,0 +1,27 @@
+Nguyễn Ngọc Trà My
+MSSV: 47.01.103.068
+
+Bài thực hành 2: Cài đặt chứng minh độ phức tạp, giải thuật Strassen cho nhân ma trận
+Input:
+Hai ma trận A và B cùng kích thước nxn
+Output: 
+Ma trận kết quả C là tích của ma trận A và B
+Cách xử lý
+-	Chia ma trận A và B thành các ma trận con theo công thức của Strassen
+-	Chia A thành A11, A12, A21, A22
+-	Chia B thành B11, B12, B21, B22
+	Tính các ma trận con T1, T2, T3, T4, T5, T6, T7 theo công thức của Strassen.
+T1 = (A11 + A22) * (B11 + B22)
+T2 = (A21 + A22) * B11
+T3 = A11 * (B12 - B22)
+T4 = A22 * (B21 - B11)
+T5 = (A11 + A12) * B22
+T6 = (A21 - A11) * (B11 + B12)
+T7 = (A12 - A22) * (B21 + B22)
+	Tính các ma trận con C11, C12, C21, C22 theo công thức của Strassen.
+C11 = T1 + T4 - T5 + T7
+C12 = T3 + T5
+C21 = T2 + T4
+C22 = T1 + T3 - T2 + T6
+	Tạo ma trận kết quả C bằng cách ghép các ma trận con theo công thức của Strassen.
+	Trả về ma trận kết quả C.
